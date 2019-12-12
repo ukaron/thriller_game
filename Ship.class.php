@@ -50,6 +50,29 @@ class Ship {
         }
     }
 
+    public function shoot($map) {
+        if ($this->_angle == 1) {
+            for ($i = 1; $i < 50; $i++) {
+                $map->put($this->_x - 2, $this->_y + $i, '|', "#FF0000");
+            }
+        }
+        else if ($this->_angle == 2){
+            for ($i = 1; $i < 50; $i++) {
+                $map->put($this->_x - $i, $this->_y + 1, '-', "#FF0000");
+            }
+        }
+        else if ($this->_angle == 3){
+            for ($i = 1; $i < 50; $i++) {
+                $map->put($this->_x - 2, $this->_y - $i, '|', "#FF0000");
+            }
+        }
+        else {
+            for ($i = 1; $i < 50; $i++) {
+                $map->put($this->_x + $i, $this->_y + 1, '-', "#FF0000");
+            }
+        }
+    }
+
     public function rotate($k)
     {
         $this->_angle = ($this->_angle + $k) % 4;
@@ -75,8 +98,10 @@ class Ship {
     {
         if ($this->_angle % 2 == 0)
             $this->_x += 1 - $this->_angle % 4;
-        if ($this->_angle % 2 == 1)
+        else if ($this->_angle % 2 == 1)
             $this->_y += 2 - $this->_angle % 4;
+        if ($this->_x < 0 or $this->_x >= 150 or $this->_y < 0 or $this->_y >= 100)
+            echo "false!".PHP_EOL;
     }
 }
 

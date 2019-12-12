@@ -9,6 +9,10 @@ class Map {
         $i = $y * self::MAX_X + $x;
         $this->_arr[$i] = [$chr, $color];
     }
+
+    public function __get($name) {
+        return ($this->$name);
+    }
         
     public function print_map()
     {

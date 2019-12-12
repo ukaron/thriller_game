@@ -32,6 +32,11 @@
 .controler {
 	display: inline-block;
 }
+.choose_ship {
+        display: inline-block;
+		margin: 15px;
+		background-color: lightblue;
+    }
 </style>
 
 
@@ -45,7 +50,7 @@ require_once('Game.class.php');
 
 $game = new Game("save.game");
 $game->handle_events($_POST);
-$game->show_map();
+$game->show_map($_POST);
 $game->show_controlers();
 $game->save();
 
