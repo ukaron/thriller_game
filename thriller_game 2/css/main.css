@@ -1,0 +1,9 @@
+.table {
+	font-family: monospace;
+	font-size: 9px;
+	display: inline-block;
+}
+
+.controler {
+	display: inline-block;
+}
