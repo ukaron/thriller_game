@@ -1,0 +1,96 @@
+body, html {
+	height: 100%;
+	margin: 0;
+}
+
+.header {
+	position: absolute;
+	right: 50px;
+	margin: 50px 20px;
+}
+
+.header ul li {
+	display: inline;
+	margin-right: 20px;
+	padding: 5px;
+	transition-duration: 0.3s;
+	border-radius: 3%;
+	text-align: center;
+}
+
+.header ul li:hover {
+	background-color: darkolivegreen;
+	color: rgba(156, 21, 21, 0.884);
+	transition-duration: 0.3s;
+}
+
+.header ul li a {
+	text-decoration: none;
+	font-family: 'Odibee Sans', cursive;
+	color: rgba(93, 163, 13, 0.884);
+	font-size: 22px;
+	letter-spacing: 3px;
+}
+
+.bg {
+	position: relative;
+	background-image: url("./imgs/1396598290_preview_Wq4ONlM.jpg");
+	background-color: rgb(34, 56, 56);
+	background-blend-mode: darken;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+h1 {
+	position: absolute;
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin: 100px auto;
+	color: rgba(156, 21, 21, 0.884);
+	font-family: 'Odibee Sans', cursive;
+	font-size: 140px;
+	letter-spacing: 12px;
+
+}
+  
+.menu {
+	position: absolute;
+	display: block;
+	margin-top: 370px;
+	color: rgba(93, 163, 13, 0.884);
+	width: 100%;
+}
+
+.menu ul {
+	list-style-type: none;
+	margin: auto;
+	text-align: center;
+	padding: 0
+	
+}
+.menu ul a {
+	text-decoration: none;
+	color: rgba(93, 163, 13, 0.884);
+}
+
+.menu ul li {
+	margin: 20px auto 12px auto;
+	font-size: 55px;
+	font-family: 'Odibee Sans', cursive;
+	letter-spacing: 5px;
+	width: fit-content;
+	padding: 2px 5px;
+	border-radius: 3%;
+	transition-duration: 0.3s;
+}
+
+.menu ul li:hover {
+	background-color: darkolivegreen;
+	color: rgba(156, 21, 21, 0.884);
+	transition-duration: 0.3s;
+}
