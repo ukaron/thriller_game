@@ -10,7 +10,12 @@
 	<body>
 		<div class="page">
 			<div class="gameboard" id="board">
-				<img src="./imgs/2.1.png" alt="Firestorm" id="Firestorm" class="ships">
+				<div id="Firestorm" class="ships">
+					<img src="./imgs/2.1.png" alt="Firestorm">
+					<div class="health">
+						<p id="h_line"></p>
+					</div>
+				</div>
 			</div>
 			<div class="players_board">
 				<div class="player">
@@ -35,6 +40,7 @@
 									<button class="forward">Move forward</button>
 									<button class="down">Move down</button>
 									<button class="up">Move up</button>
+									<button id="punch">Punch it</button>
 								</td>
 							</tr>
 						</tbody>

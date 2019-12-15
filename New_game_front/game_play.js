@@ -3,6 +3,7 @@ $(document).ready(function(){
 	$(".down").click(move_down);
 	$(".up").click(move_up);
 	$("#place_new").click(place_new);
+	$("#punch").click(reduce_health);
 });
 
 //setInterval(parse_json, 3000);
@@ -19,8 +20,12 @@ function parse_json() {
 function update_game(game_data) {
 	var ships_array = game_data.info;
 	for (i = 0; i++; i < ships_array.lenght) {
-		update_ship(ships_array[i].name, ships_array[i].)
+		update_ship(ships_array[i]);
 	}
+}
+
+function update_ship(ship_item) {
+	$("#" + ship_item.name).css({"left": (ship_item.x*10) + 'px', "top": (ship_item.y*10) + 'px'});
 }
 
 function place_new () {
@@ -32,6 +37,20 @@ function place_new () {
 		data: {'name': 'Diver', 'top': '10', 'left': '1000'},
 		success: function(response) { console.log(response); }
 	});
+}
+
+function reduce_health() {
+	$.ajax({
+		url: './moves.php',
+		type: 'post',
+		data: {'punch': '1'},
+		success: function(data) { cut_health(data); console.log(data); }
+	});
+}
+
+function cut_health(data) {
+	data = data.split(":");
+	$(data[0] + " .health" + " #h_line").css({"width": (data[1] + "%")})
 }
 
 function move_forward() {
